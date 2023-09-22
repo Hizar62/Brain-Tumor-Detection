@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import numpy as np
 import os
-# from model import image_pre, predict
+from model import image_pre, predict
 
 app = Flask(__name__)
 
@@ -24,7 +24,7 @@ def upload_file():
         file1.save(path)
 
         data = image_pre(path)
-        s = prdict(data)
+        s = predict(data)
         if s == 1:
             result = "No Brain Cancer"
         else:
