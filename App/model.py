@@ -3,8 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image, ImageOps
 
-base = 'D:\Brain-Tumor-Detection'
-model = keras.models.load_model(f'{base}/model.h5')
+base = 'C:\Users\Hizar\Downloads\anotherone\Brain-Tumor-Detection'
+model = keras.models.load_model(f'{base}\model.h5')
 
 
 def image_pre(path):

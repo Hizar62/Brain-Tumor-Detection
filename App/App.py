@@ -5,7 +5,7 @@ from model import image_pre, predict
 
 app = Flask(__name__)
 
-UPLOAD_FOLDER = 'App/static'
+UPLOAD_FOLDER = 'C:\Users\Hizar\Downloads\anotherone\Brain-Tumor-Detection\App\static'
 ALLOWED_EXTENSHIONS = set({'png','jpg','jpeg'})
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
