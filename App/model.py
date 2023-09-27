@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image, ImageOps
 
-base = 'C:\Users\Hizar\Downloads\anotherone\Brain-Tumor-Detection'
+base = 'C:\\Users\\Hizar\\Downloads\\anotherone\\Brain-Tumor-Detection'
 model = keras.models.load_model(f'{base}\model.h5')
 
 
@@ -13,7 +13,7 @@ def image_pre(path):
     size = (150,150)
     image = Image.open(path)
     image = ImageOps.grayscale(image)
-    image = ImageOps.fit(image,size,Image.ANTIALIAS)
+    image = ImageOps.fit(image,size,Image.BILINEAR)
     image_array = np.asarray(image)
     data = image_array.reshape((-1,150,150,1))
     return data
